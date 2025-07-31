@@ -5,18 +5,18 @@ class BankAccount:
     def deposit(self, amount):
         if amount > 0:
             self.__account_balance += amount
-            print(f'Deposited: ${amount}')  # (optional if your test expects this)
+            print(f"Deposited: ${amount:.2f}")
 
     def withdraw(self, amount):
         if amount <= self.__account_balance:
             self.__account_balance -= amount
-            print(f'Withdrew: ${amount}')  
+            print(f"Withdrew: ${amount:.2f}")
         else:
-            print("Insufficient funds")
+            print("Insufficient funds.")
 
     def get_balance(self):
         return self.__account_balance
 
     def display_balance(self):
-        print(f"Current Balance: {self.__account_balance}")
+        print(f"Current Balance: ${self.__account_balance:.2f}")
 
