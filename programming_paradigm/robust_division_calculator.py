@@ -1,7 +1,11 @@
 def safe_divide(numerator, denominator):
-  try:
-    print(numerator/denominator)
-  except ZeroDivisionError:
-    print("it have division by zero error")
-    
-         
+    try:
+        numerator = float(numerator)
+        denominator = float(denominator)
+        result = numerator / denominator
+        print(result)
+    except ZeroDivisionError:
+        print("It has a division by zero error")
+    except ValueError:
+        print("Invalid input: please enter numeric values")
+
